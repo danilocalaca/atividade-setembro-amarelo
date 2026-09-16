@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Pausa favicon">
+  <rect width="64" height="64" rx="18" fill="#f8f3ea"/>
+  <circle cx="32" cy="32" r="18" fill="#d8b75d" opacity="0.9"/>
+  <circle cx="32" cy="32" r="9" fill="#18352f" opacity="0.9"/>
+</svg>

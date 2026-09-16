@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pausa é um projeto acadêmico sobre acolhimento emocional, respiração consciente e caminhos para buscar apoio em momentos difíceis."
+    />
+    <title>Pausa | Respire, reflita e busque apoio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/pausa-favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Página inicial do Pausa">Pausa</a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Abrir menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="site-nav" aria-label="Navegação principal">
+          <a href="#inicio">Início</a>
+          <a href="#respire">Respire</a>
+          <a href="#apoio">Apoio</a>
+          <a href="#sobre">Sobre</a>
+        </nav>
+
+        <a class="header-cta" href="tel:188" aria-label="Ligar para o CVV">Fale com o CVV</a>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero section">
+        <div class="container hero-layout">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Acolhimento</p>
+            <h1>Nem todo dia precisa ser resolvido hoje.</h1>
+            <p class="lead">
+              Há momentos em que parar, respirar e conversar já é um começo. O Pausa
+              foi pensado para oferecer um espaço mais lento, mais humano e mais seguro.
+            </p>
+            <a class="primary-button" href="#respire">Fale com o CVV</a>
+          </div>
+
+          <div class="hero-art reveal" aria-hidden="true">
+            <div class="orb orb-one"></div>
+            <div class="orb orb-two"></div>
+            <div class="orb orb-three"></div>
+            <div class="paper-card">
+              <span class="card-label">Silêncio</span>
+              <p>Um instante de presença é suficiente para começar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section breathe-section" id="respire">
+        <div class="container narrow reveal">
+          <p class="eyebrow">Respire comigo</p>
+          <h2>Por alguns segundos, não faça nada além de acompanhar o ritmo.</h2>
+        </div>
+
+        <div class="container breathing-wrap">
+          <div class="breathing-panel reveal">
+            <div class="breathing-visual" aria-live="polite">
+              <div class="ring ring-base"></div>
+              <div class="ring ring-glow"></div>
+              <div id="breathCircle" class="breath-circle" aria-label="Exercício de respiração"></div>
+            </div>
+
+            <div class="breathing-meta">
+              <p id="breathPhase" class="phase-label">Preparando</p>
+              <p id="breathCountdown" class="countdown">0</p>
+              <p id="breathMessage" class="phase-message">Abrace o ritmo do momento.</p>
+            </div>
+
+            <div class="breathing-actions">
+                <button id="pauseBreath" class="secondary-button small" type="button">Pausar</button>
+                <button id="startBreath" class="primary-button small" type="button">Iniciar</button>
+                <button id="resetBreath" class="ghost-button small" type="button">Reiniciar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reflection-section">
+        <div class="container reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Uma coisa para lembrar</p>
+            <h2>Você não precisa carregar tudo sozinho.</h2>
+          </div>
+
+          <div class="reflection-box">
+            <p id="randomQuote" class="quote-text">
+              Você não precisa encontrar todas as respostas hoje.
+            </p>
+            <button id="nextQuote" class="secondary-button" type="button">
+              Ler outra frase
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section mood-section">
+        <div class="container reveal">
+          <div class="section-heading narrow-heading">
+            <p class="eyebrow">Diário rápido</p>
+            <h2>Como você chegou até aqui?</h2>
+          </div>
+
+          <div class="mood-picker" role="radiogroup" aria-label="Como você chegou até aqui?">
+            <button class="mood-option" type="button" data-mood="Leve">
+              <span class="mood-dot"></span>
+              Leve
+            </button>
+            <button class="mood-option" type="button" data-mood="Cansado">
+              <span class="mood-dot"></span>
+              Cansado
+            </button>
+            <button class="mood-option" type="button" data-mood="Ansioso">
+              <span class="mood-dot"></span>
+              Ansioso
+            </button>
+            <button class="mood-option" type="button" data-mood="Triste">
+              <span class="mood-dot"></span>
+              Triste
+            </button>
+            <button class="mood-option" type="button" data-mood="Confuso">
+              <span class="mood-dot"></span>
+              Confuso
+            </button>
+            <button class="mood-option" type="button" data-mood="Em paz">
+              <span class="mood-dot"></span>
+              Em paz
+            </button>
+          </div>
+
+          <p id="moodMessage" class="mood-message" aria-live="polite">
+            Obrigado por perceber como você está. Dar nome ao que sentimos pode ser um primeiro passo.
+          </p>
+        </div>
+      </section>
+
+      <section class="section support-section" id="apoio">
+        <div class="container reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Quando precisar de alguém</p>
+            <h2>Buscar ajuda é um cuidado e não um sinal de fracasso.</h2>
+          </div>
+
+          <div class="support-grid">
+            <article class="support-item">
+              <p class="support-tag">CVV</p>
+              <h3>Centro de Valorização da Vida</h3>
+              <p>
+                O CVV oferece atendimento por telefone, de forma gratuita e confidencial,
+                para pessoas em situação de crise, sofrimento emocional ou que precisam conversar.
+              </p>
+              <div class="support-actions">
+                <a class="primary-button small" href="tel:188">Ligar 188</a>
+                <a class="inline-link" href="https://cvv.org.br" target="_blank" rel="noreferrer">cvv.org.br</a>
+              </div>
+            </article>
+
+            <article class="support-item">
+              <p class="support-tag">CAPS</p>
+              <h3>Centros de Atenção Psicossocial</h3>
+              <p>
+                Os CAPS fazem parte da rede pública de saúde mental e podem oferecer atendimento,
+                acompanhamento e orientações em situações que exigem cuidado profissional.
+              </p>
+            </article>
+
+            <article class="support-item">
+              <p class="support-tag">UBS</p>
+              <h3>Unidades básicas de saúde</h3>
+              <p>
+                A UBS também pode ser uma porta de entrada para acolhimento, avaliação e encaminhamento,
+                especialmente quando a pessoa precisa iniciar os cuidados por um serviço público.
+              </p>
+            </article>
+
+            <article class="support-item">
+              <p class="support-tag">Clínicas-escola</p>
+              <h3>Atendimento universitário</h3>
+              <p>
+                Algumas instituições de ensino oferecem atendimentos psicológicos supervisionados,
+                conforme disponibilidade e critérios locais. Vale verificar a possibilidade na sua cidade.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section emergency-section">
+        <div class="container reveal">
+          <div class="emergency-box">
+            <div class="emergency-left">
+              <p class="eyebrow">Emergência</p>
+              <h2>Precisa conversar com alguém agora?</h2>
+              <a class="inline-link" href="https://cvv.org.br" target="_blank" rel="noreferrer">cvv.org.br</a>
+            </div>
+            <p class="emergency-copy">
+              Se você estiver passando por uma situação de crise ou pensando em se machucar,
+              procure ajuda imediatamente. Não precisa enfrentar isso sozinho.
+            </p>
+            <div class="emergency-callout">
+              <strong>CVV 188</strong>
+              <a class="primary-button small" href="tel:188">Ligar agora</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="sobre">
+        <div class="container about-box reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Sobre o projeto</p>
+            <h2>Pausa é um projeto acadêmico pensado para ampliar a conscientização sobre saúde emocional.</h2>
+          </div>
+          <p>
+            Este site foi criado para a atividade de Setembro Amarelo, com o objetivo de
+            promover reflexão, acolhimento e informação sobre caminhos de apoio emocional.
+            Pausa é um espaço de conscientização e não substitui atendimento psicológico,
+            médico ou qualquer serviço profissional de saúde.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-row">
+          <span class="footer-mark">©</span>
+          <span>2026</span>
+          <span class="brand-name">Pausa</span>
+          <span>Danilo Calaça</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
